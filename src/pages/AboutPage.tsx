@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { CheckCircle2, ArrowRight } from 'lucide-react';
-
+import image from '../image/angkor.png';
 const PROGRAM_CARDS = [
   { title: 'Kindergarten', age: 'Ages 3-5' },
   { title: 'Primary School', age: 'Ages 6-11' },
@@ -13,10 +13,10 @@ export const AboutPage = () => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative h-[500px] flex items-center overflow-hidden">
+      <section className="relative h-[1050px] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2000&auto=format&fit=crop" 
+            src={image} 
             alt="Khmer Heritage" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"

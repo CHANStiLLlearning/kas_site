@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { Search, Mail, ArrowRight, Clock } from 'lucide-react';
 
@@ -19,7 +20,7 @@ export const BlogPage = () => {
       description: "Discover how our eco-friendly initiatives, from solar panels to community gardens, are shaping a sustainable future for our school and local community.",
       category: "Sustainability",
     },
-  ]
+  ];
   const subAcademic = [
     {
       title: "The Vision of 2025: Bridging Global Tech with Khmer Tradition",
@@ -33,10 +34,8 @@ export const BlogPage = () => {
       category: "Arts & Culture",
       time: "8 min read",
     },
-    
-    
-  ]
-  
+  ];
+
   return (
     <div className="bg-white">
       <section className="px-6 py-12 max-w-7xl mx-auto">
@@ -48,7 +47,7 @@ export const BlogPage = () => {
           <h1 className="text-[#c02424] text-5xl md:text-7xl font-bold tracking-tighter leading-none mb-6 italic">
             Ambassador
           </h1>
-          <p className="text-slate-600 font-medium italic max-w-xl text-lg border-l-4 border-[#FFD700] pl-4">
+          <p className="text-slate-600 font-medium italic max-w-xl text-lg border-l-4 border-[#FFD700] pl-4 line-clamp-2">
             Chronicles of excellence, cultural heritage, and the evolving landscape of global education at Khmer American School.
           </p>
         </div>
@@ -57,70 +56,73 @@ export const BlogPage = () => {
           {/* Main Content Column */}
           <div className="lg:col-span-2 space-y-12">
             {/* Featured Post */}
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.98 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="relative rounded-[2.5rem] overflow-hidden group shadow-2xl h-[500px]"
-            >
-              <img 
-                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop" 
-                alt="Main post" 
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#000F35] via-transparent to-transparent opacity-90" />
-              <div className="absolute bottom-0 left-0 p-8 md:p-12 w-full">
-                <h2 className="text-white text-3xl md:text-5xl font-bold mb-4 leading-tight group-hover:translate-x-2 transition-transform">
-                  The Vision of 2025: Bridging <br /> Global Tech with Khmer Tradition
-                </h2>
-                <p className="text-slate-200 mb-6 max-w-xl font-medium leading-relaxed opacity-80">
-                  Explore how our new Innovation Wing integrates traditional architectural motifs with world-class STEM facilities for the next generation of leaders.
-                </p>
-                <div className="flex items-center gap-6 text-sm text-white/70 font-semibold border-t border-white/20 pt-6">
-                  <span className="flex items-center gap-2 decoration-[#FFD700] underline-offset-4 decoration-2 underline">
-                    <Clock size={16} /> 8 min read
-                  </span>
-                  <span className="uppercase tracking-widest">Published May 02, 2026</span>
+            <Link to="/blog/1" className="group block no-underline">
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.98 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="relative rounded-[2.5rem] overflow-hidden group shadow-2xl h-117.5 md:min-h-180"
+              >
+                <img 
+                  src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop" 
+                  alt="Main post" 
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-[#000F35] via-transparent to-transparent opacity-90" />
+                <div className="absolute bottom-0 left-0 p-8 md:p-12 w-full">
+                  <h2 className="text-white text-3xl md:text-5xl font-bold mb-4 leading-tight group-hover:translate-x-2 transition-transform">
+                    The Vision of 2025: Bridging <br /> Global Tech with Khmer Tradition
+                  </h2>
+                  <p className="text-slate-200 mb-6 max-w-xl font-medium leading-relaxed opacity-80">
+                    Explore how our new Innovation Wing integrates traditional architectural motifs with world-class STEM facilities for the next generation of leaders.
+                  </p>
+                  <div className="flex items-center gap-6 text-sm text-white/70 font-semibold border-t border-white/20 pt-6">
+                    <span className="flex items-center gap-2 decoration-[#FFD700] underline-offset-4 decoration-2 underline">
+                      <Clock size={16} /> 8 min read
+                    </span>
+                    <span className="uppercase tracking-widest">Published May 02, 2026</span>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </Link>
 
             {/* Grid Posts */}
             <div className="grid md:grid-cols-2 gap-8">
               {[1, 2].map((i) => (
-                <motion.div 
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-[2rem] border border-slate-100 shadow-xl overflow-hidden hover:shadow-2xl transition-all"
-                >
-                  <img 
-                    src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=800&auto=format&fit=crop" 
-                    alt="Article" 
-                    className="w-full h-64 object-cover"
-                    referrerPolicy="no-referrer"
-                  />
-                  <div className="p-8 ">
-                    <span className="text-[#c02424] font-bold text-sm uppercase tracking-widest mb-4 block">
-                      {subAcademic[i - 1]?.category || "Uncategorized"}
-                    </span>
-                    <h3 className="text-[#002B7F] text-2xl font-bold mb-4">
-                      {subAcademic[i - 1]?.title || "Write The Text Here For The Title Area"}
-                    </h3>
-                    <p className="text-slate-500 text-sm mb-6 leading-relaxed">
-                      {subAcademic[i - 1]?.description || "Write The Text Here For The Description Area"}
-                    </p>
-                    <div className="flex items-center justify-between pt-6 border-t border-slate-100">
-                      <span className="text-slate-400 text-xs font-bold block">
-                        {subAcademic[i - 1]?.time || "8 min read"}
+                <Link key={i} to={`/blog/${i + 1}`} className="group no-underline">
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="bg-white rounded-4xl border border-slate-100 shadow-xl overflow-hidden hover:shadow-2xl transition-all"
+                  >
+                    <img 
+                      src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=800&auto=format&fit=crop" 
+                      alt="Article" 
+                      className="w-full h-64 object-cover"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="p-8 ">
+                      <span className="text-[#c02424] font-bold text-sm uppercase tracking-widest mb-4 block">
+                        {subAcademic[i - 1]?.category || "Uncategorized"}
                       </span>
-                      <a href="#" className="text-[#002B7F] font-bold text-sm flex items-center gap-2 group hover:gap-3 transition-all">
-                        READ MORE <ArrowRight size={16} />
-                      </a>
+                      <h3 className="text-[#002B7F] text-2xl font-bold mb-4">
+                        {subAcademic[i - 1]?.title || "Write The Text Here For The Title Area"}
+                      </h3>
+                      <p className="text-slate-500 text-sm mb-6 leading-relaxed">
+                        {subAcademic[i - 1]?.description || "Write The Text Here For The Description Area"}
+                      </p>
+                      <div className="flex items-center justify-between pt-6 border-t border-slate-100">
+                        <span className="text-slate-400 text-xs font-bold block">
+                          {subAcademic[i - 1]?.time || "8 min read"}
+                        </span>
+                        <span className="text-[#002B7F] font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-all">
+                          READ MORE <ArrowRight size={16} />
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                </motion.div>
+                  </motion.div>
+                </Link>
               ))}
             </div>
           </div>
@@ -128,7 +130,7 @@ export const BlogPage = () => {
           {/* Sidebar Column */}
           <div className="space-y-10">
             {/* Search Box */}
-            <div className="bg-[#E9F0FF] p-8 rounded-[2rem] shadow-sm">
+            <div className="bg-[#E9F0FF] p-8 rounded-4xl shadow-sm">
               <h4 className="text-[#002B7F] font-bold text-xl mb-6 flex items-center gap-3">
                 <Search size={22} /> Find Insight
               </h4>

@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useParams } from "react-router-dom";
 import { Header } from "./components/Header";
 import { HomePage } from "./pages/HomePage";
 import { BlogPage } from "./pages/BlogPage";
@@ -9,6 +9,7 @@ import ProgramsPage from "./pages/ProgramsPage";
 import EventsPage from "./pages/EventsPage";
 import PlansPage from "./pages/PlansPage";
 import ContactUS from "./pages/ContactUS";
+import { BlogPostDetail } from "./pages/BlogPostDetail";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:id" element={<BlogPostDetail />} />
             <Route path="/programs" element={<ProgramsPage />} />
             <Route path="/events" element={<EventsPage />} />
             <Route path="/plans" element={<PlansPage />} />
