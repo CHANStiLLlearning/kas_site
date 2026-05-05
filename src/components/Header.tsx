@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { Search, Menu, X } from 'lucide-react';
-import { motion } from 'motion/react';
-import { Link, useLocation } from 'react-router-dom';
-import logo from '../image/logo.png';
+import React, { useState } from "react";
+import { Search, Menu, X } from "lucide-react";
+import { motion } from "motion/react";
+import { Link, useLocation } from "react-router-dom";
+import logo from "../image/logo.png";
 const NAV_ITEMS = [
-  { name: 'Home', path: '/' },
-  { name: 'Blog', path: '/blog' },
-  { name: 'Programs', path: '/programs' },
-  { name: 'Events', path: '/events' },
-  { name: 'Plans', path: '/plans' },
-  { name: 'Contact US', path: '/contact' },
-  { name: 'About', path: '/about' }
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog" },
+  { name: "Programs", path: "/programs" },
+  { name: "Events", path: "/events" },
+  { name: "Plans", path: "/plans" },
+  { name: "Contact US", path: "/contact" },
+  { name: "About", path: "/about" },
 ];
 
 export const Header = () => {

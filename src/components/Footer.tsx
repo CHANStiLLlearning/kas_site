@@ -1,5 +1,5 @@
-import React from 'react';
-import { Facebook, Instagram, Send } from 'lucide-react';
+import React from "react";
+import { Facebook, Instagram, Send } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -12,12 +12,18 @@ export const Footer = () => {
               Contact Us :
             </h5>
             <div className="space-y-2 text-xl font-bold tracking-tight">
-              <p className="hover:text-[#FFD700] transition-colors cursor-pointer">+855 12 398 223</p>
-              <p className="hover:text-[#FFD700] transition-colors cursor-pointer">+855 12 586 680</p>
-              <p className="hover:text-[#FFD700] transition-colors cursor-pointer">+855 70 32 42 42</p>
+              <p className="hover:text-[#FFD700] transition-colors cursor-pointer">
+                +855 12 398 223
+              </p>
+              <p className="hover:text-[#FFD700] transition-colors cursor-pointer">
+                +855 12 586 680
+              </p>
+              <p className="hover:text-[#FFD700] transition-colors cursor-pointer">
+                +855 70 32 42 42
+              </p>
             </div>
           </div>
-          
+
           <div className="md:col-span-1">
             <h5 className="text-lg font-bold mb-6 flex items-center gap-2">
               <span className="w-1 h-6 bg-[#FFD700] rounded-full" />
@@ -38,13 +44,13 @@ export const Footer = () => {
             </h5>
             <div className="flex gap-4">
               {[
-                { icon: Facebook, color: 'bg-blue-600' },
-                { icon: Instagram, color: 'bg-pink-600' },
-                { icon: Send, color: 'bg-sky-500' }
+                { icon: Facebook, color: "bg-blue-600" },
+                { icon: Instagram, color: "bg-pink-600" },
+                { icon: Send, color: "bg-sky-500" },
               ].map((social, idx) => (
-                <a 
-                  key={idx} 
-                  href="#" 
+                <a
+                  key={idx}
+                  href="#"
                   className={`${social.color} w-10 h-10 rounded-full flex items-center justify-center hover:scale-110 transition-transform`}
                   aria-label={`Follow us on ${social.icon.name}`}
                 >
@@ -58,8 +64,12 @@ export const Footer = () => {
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-400 text-xs font-semibold uppercase tracking-widest text-center md:text-left">
           <p>© 2024 Khmer American School. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-white transition-colors">
+              Privacy Policy
+            </a>
+            <a href="#" className="hover:text-white transition-colors">
+              Terms of Service
+            </a>
           </div>
         </div>
       </div>
