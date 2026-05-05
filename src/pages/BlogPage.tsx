@@ -70,10 +70,10 @@ export const BlogPage = () => {
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-[#000F35] via-transparent to-transparent opacity-90" />
                 <div className="absolute bottom-0 left-0 p-8 md:p-12 w-full">
-                  <h2 className="text-white text-3xl md:text-5xl font-bold mb-4 leading-tight group-hover:translate-x-2 transition-transform">
+                  <h2 className="text-white text-3xl md:text-5xl font-bold mb-4 leading-tight group-hover:translate-x-2 transition-transform line-clamp-3">
                     The Vision of 2025: Bridging <br /> Global Tech with Khmer Tradition
                   </h2>
-                  <p className="text-slate-200 mb-6 max-w-xl font-medium leading-relaxed opacity-80">
+                  <p className="text-slate-200 mb-6 max-w-xl font-medium leading-relaxed opacity-80 line-clamp-2">
                     Explore how our new Innovation Wing integrates traditional architectural motifs with world-class STEM facilities for the next generation of leaders.
                   </p>
                   <div className="flex items-center gap-6 text-sm text-white/70 font-semibold border-t border-white/20 pt-6">
@@ -106,10 +106,10 @@ export const BlogPage = () => {
                       <span className="text-[#c02424] font-bold text-sm uppercase tracking-widest mb-4 block">
                         {subAcademic[i - 1]?.category || "Uncategorized"}
                       </span>
-                      <h3 className="text-[#002B7F] text-2xl font-bold mb-4">
+                      <h3 className="text-[#002B7F] text-2xl font-bold mb-4 line-clamp-2">
                         {subAcademic[i - 1]?.title || "Write The Text Here For The Title Area"}
                       </h3>
-                      <p className="text-slate-500 text-sm mb-6 leading-relaxed">
+                      <p className="text-slate-500 text-sm mb-6 leading-relaxed line-clamp-3">
                         {subAcademic[i - 1]?.description || "Write The Text Here For The Description Area"}
                       </p>
                       <div className="flex items-center justify-between pt-6 border-t border-slate-100">

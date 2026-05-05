@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, useParams } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useParams,
+} from "react-router-dom";
 import { Header } from "./components/Header";
 import { HomePage } from "./pages/HomePage";
 import { BlogPage } from "./pages/BlogPage";
